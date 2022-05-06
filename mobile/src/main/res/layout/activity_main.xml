@@ -1,0 +1,128 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/clButtons"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvSongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            tools:text="Canción - Artista" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clButtons"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="3dip"
+            android:minHeight="3dip"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/player_progress_bar"
+            android:splitTrack="false"
+            android:thumbTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:splitTrack="false" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPause"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_pause_m"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <ProgressBar
+            android:id="@+id/playLoader"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/loader_background"
+            android:indeterminateTint="@color/black"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+            app:layout_constraintEnd_toEndOf="@+id/ivPlay"
+            app:layout_constraintStart_toStartOf="@+id/ivPlay"
+            app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRw"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="36dp"
+            android:rotation="180"
+            android:src="@drawable/ic_fw"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRw15"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_rw_15"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+            app:layout_constraintStart_toEndOf="@+id/ivRw"
+            app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFw"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="36dp"
+            android:src="@drawable/ic_fw"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFw15"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_fw_15"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+            app:layout_constraintEnd_toStartOf="@+id/ivFw"
+            app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
