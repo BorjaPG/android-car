@@ -32,11 +32,17 @@ android {
 }
 
 dependencies {
+    //Car App Library dependency
+    implementation 'androidx.car.app:app:1.2.0-rc01'
+    //Android auto dependency
+    implementation 'androidx.car.app:app-projected:1.2.0-rc01'
+    //Automotive OS dependency
+    implementation 'androidx.car.app:app-automotive:1.1.0'
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation project(path: ':shared')
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
